@@ -60,7 +60,7 @@ runs:
       shell: bash
       
     - name: Setup Android NDK
-      uses: nttld/setup-ndk@v1.2.0
+      uses: nttld/setup-ndk@v1.5.0
 
     - name: Decode keystore and create jks and properties file for signing the app
       shell: bash
