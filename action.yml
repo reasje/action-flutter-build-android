@@ -54,7 +54,8 @@ runs:
       with:
         channel: "stable"
         flutter-version: '3.24.5'
-        cache-key: "flutter-:os:-:channel:-:version:-:arch:-:"
+        cache-key: "flutter-${{ runner.os }}-${{ inputs.channel }}-${{ inputs.flutter-version }}-${{ runner.arch }}"
+        pub-cache-key:: "flutter-pub-${{ runner.os }}-${{ inputs.channel }}-${{ inputs.flutter-version }}-${{ runner.arch }}"
         cache: true
 
     - run: flutter --version
