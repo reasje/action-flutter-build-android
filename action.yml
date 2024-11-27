@@ -54,6 +54,7 @@ runs:
       with:
         channel: "stable"
         flutter-version: '3.24.5'
+        cache-key: "flutter-:os:-:channel:-:version:-:arch:-:"
         cache: true
 
     - run: flutter --version
