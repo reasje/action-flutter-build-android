@@ -49,6 +49,7 @@ runs:
         fi
 
     - name: Setup flutter
+      if: steps.check_flutter.outputs.installed == 'false'
       uses: subosito/flutter-action@2
       with:
         channel: "stable"
