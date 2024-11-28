@@ -52,8 +52,8 @@ runs:
       if: steps.check_flutter.outputs.installed == 'false'
       uses: subosito/flutter-action@2
       with:
-        channel: stable
-        flutter-version: 3.24.5
+        channel: "stable"
+        flutter-version: '3.24.5'
         cache: true
 
     - run: flutter --version
