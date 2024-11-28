@@ -24,7 +24,7 @@ runs:
       id: check_java
       shell: bash
       run: |
-        if java --version; then
+        if java --version 2>&1 | grep -q "17"; then
             echo "installed=true" >> "$GITHUB_OUTPUT"
         else
             echo "installed=false" >> "$GITHUB_OUTPUT"
@@ -56,7 +56,7 @@ runs:
         flutter-version: '3.24.5'
         cache: true
 
-    - run: flutter --version
+    - run: flutter doctor -v
       shell: bash
       
     - name: Setup Android NDK
