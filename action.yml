@@ -58,12 +58,6 @@ runs:
 
     - run: flutter doctor -v
       shell: bash
-      
-    - run: which cmake
-      shell: bash
-
-    - run: cmake --version
-      shell: bash
 
     - name: Setup Android NDK
       uses: nttld/setup-ndk@v1.5.0
