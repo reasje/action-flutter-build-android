@@ -30,6 +30,14 @@ runs:
             echo "installed=false" >> "$GITHUB_OUTPUT"
         fi
 
+    - name: Clear gradle cache
+      run: |
+        cd android
+        ./gradlew clean
+        rm rf gradle/caches/
+        ./gradlew build
+      shell: bash
+
     - name: Install java
       if: steps.check_java.outputs.installed == 'false'
       uses: actions/setup-java@v3
