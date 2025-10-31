@@ -36,7 +36,6 @@ runs:
       with:
         distribution: "zulu"
         java-version: "17.x"
-        cache: "gradle"
 
     - name: Check flutter found
       id: check_flutter
