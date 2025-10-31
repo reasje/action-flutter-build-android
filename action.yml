@@ -58,6 +58,11 @@ runs:
     - run: flutter doctor -v
       shell: bash
 
+
+    - name: Flutter clean
+      run: flutter clean
+      shell: bash
+
     - name: Setup Android NDK
       uses: nttld/setup-ndk@v1.5.0
       with:
