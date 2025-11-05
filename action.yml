@@ -46,6 +46,7 @@ runs:
       with:
         distribution: "zulu"
         java-version: "17.x"
+        cache: "gradle"
 
     - name: Check flutter found
       id: check_flutter
@@ -66,11 +67,6 @@ runs:
         cache: true
 
     - run: flutter doctor -v
-      shell: bash
-
-
-    - name: Flutter clean
-      run: flutter clean
       shell: bash
 
     - name: Setup Android NDK
